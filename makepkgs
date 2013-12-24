@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#Creating ports set
+poudriere ports -c
+#Install make.conf
+cp pkgroot-make.conf /usr/local/etc/poudriere.d/
+#Install ports options
+rm -rf /usr/local/etc/poudriere.d/pkgroot-options
+cp -R pkgroot-options /usr/local/etc/poudriere.d/
+#Create Poudriere Jail
+poudriere jail -c -v 11.0-CURRENT -j pkgroot -a amd64
+#Run Ports Building Job
+poudriere bulk -j pkgroot -p default -f ports.list -r -T -v
