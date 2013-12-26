@@ -12,6 +12,7 @@ ftp/wget
 devel/valgrind
 sysutils/screen
 security/gnutls3
+security/cyrus-sasl2-gssapi
 databases/db6
 databases/postgresql93-client
 net/samba4
