@@ -6,3 +6,4 @@ portsnap fetch update
 ./portmerge git https://github.com/cpu82/skype4-ports/
 ./portmerge git https://github.com/brunolauze/freebsd-ports/
 find /usr/ports -name "Makefile" -exec  sed -i '' -e 's|graphics/jpeg|graphics/libjpeg-turbo|g' {} +
+find /usr/ports -name "Makefile.common" -exec  sed -i '' -e 's|graphics/jpeg|graphics/libjpeg-turbo|g' {} +
