@@ -1,0 +1,8 @@
+#!/bin/sh
+
+
+rm -rf /usr/local/poudriere/data/logs/bulk/*
+rm -rf /usr/local/poudriere/data/build/*
+rm -rf /usr/local/poudriere/data/cache/*
+rm -rf /usr/local/poudriere/data/packages/*
+
