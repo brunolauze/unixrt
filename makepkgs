@@ -4,6 +4,12 @@
 poudriere ports -c
 #Install make.conf
 cp pkgroot-make.conf /usr/local/etc/poudriere.d/
+#Delete any previous run
+rm -rf /usr/local/poudriere/data/logs/bulk/pkgroot-default
+rm -rf /usr/local/poudriere/data/packages/pkgroot-default
+rm -rf /usr/local/poudriere/data/build/pkgroot-default
+rm -rf /usr/local/poudriere/data/cache/pkgroot-default
+rm -rf /usr/local/poudriere/data/queue/pkgroot-default
 #Install ports options
 rm -rf /usr/local/etc/poudriere.d/pkgroot-options
 cp -R pkgroot-options /usr/local/etc/poudriere.d/
