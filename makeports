@@ -7,3 +7,6 @@ portsnap fetch update
 ./portmerge git https://github.com/brunolauze/freebsd-ports/
 find /usr/ports -name "Makefile" -exec  sed -i '' -e 's|graphics/jpeg|graphics/libjpeg-turbo|g' {} +
 find /usr/ports -name "Makefile.common" -exec  sed -i '' -e 's|graphics/jpeg|graphics/libjpeg-turbo|g' {} +
+echo "Linux CentOS 6.2 Qt 4.7 X11 port" > /usr/ports/x11-toolkits/linux-c6-qt47-x11/pkg-descr
+echo "Linux CentOS 6.2 Qt 4.7 WebKit port" > /usr/ports/www/linux-c6-qt47-webkit/pkg-descr
+echo "Qt 4 Framework" > /usr/ports/x11-toolkits/qt4-gui/pkg-descr

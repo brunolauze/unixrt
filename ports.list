@@ -41,6 +41,7 @@ emulators/linux_base-c6
 graphics/linux-c6-jpeg
 graphics/linux-c6-tiff
 x11-toolkits/linux-c6-qt47-x11
+x11-wm/mutter
 www/chromium
 www/webkit-gtk3
 x11/gnome-terminal
@@ -53,3 +54,4 @@ x11-toolkits/gnome-sharp20
 x11-toolkits/gtk-sharp-beans
 net-im/skype4
 editors/libreoffice
+emulators/virtualbox-ose-additions

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+#Run Ports Building Job
+poudriere bulk -j pkgroot -p default -f ports.list -T -v
