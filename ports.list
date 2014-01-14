@@ -46,6 +46,7 @@ www/chromium
 www/webkit-gtk3
 x11/gnome-terminal
 x11-toolkits/libgdiplus
+x11/nvidia-driver
 lang/mono
 www/xsp
 x11-toolkits/gtk-sharp20

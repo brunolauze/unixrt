@@ -5,6 +5,7 @@ portsnap fetch update
 ./portmerge svn https://trillian.chruetertee.ch/svn/ports/trunk/
 ./portmerge git https://github.com/cpu82/skype4-ports/
 ./portmerge git https://github.com/brunolauze/freebsd-ports/
+cp patches/patch-ui__gl__gl_surface_egl.c /usr/ports/www/chromium/files/
 find /usr/ports -name "Makefile" -exec  sed -i '' -e 's|graphics/jpeg|graphics/libjpeg-turbo|g' {} +
 find /usr/ports -name "Makefile.common" -exec  sed -i '' -e 's|graphics/jpeg|graphics/libjpeg-turbo|g' {} +
 echo "Linux CentOS 6.2 Qt 4.7 X11 port" > /usr/ports/x11-toolkits/linux-c6-qt47-x11/pkg-descr
