@@ -2,8 +2,15 @@ lang/python
 lang/perl5.18
 devel/libdispatch
 misc/e2fsprogs-libuuid
+archivers/unzip
 devel/git
 devel/llvm-mono
+security/sudo
+ports-mgmt/portaudit
+ports-mgmt/portmaster
+net/mpd5
+net/rsync
+www/links
 graphics/png
 graphics/libjpeg-turbo
 graphics/giflib
@@ -56,3 +63,5 @@ x11-toolkits/gtk-sharp-beans
 net-im/skype4
 editors/libreoffice
 emulators/virtualbox-ose-additions
+www/nginx-devel
+databases/postgresql93-server
