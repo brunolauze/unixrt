@@ -10,6 +10,7 @@ ports-mgmt/portaudit
 ports-mgmt/portmaster
 net/mpd5
 net/rsync
+net/nss_ldap
 www/links
 graphics/png
 graphics/libjpeg-turbo
