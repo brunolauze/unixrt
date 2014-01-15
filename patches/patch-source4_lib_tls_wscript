@@ -1,0 +1,15 @@
+--- source4/lib/tls/wscript.orig	2014-01-14 13:08:38.536159613 -0600
++++ source4/lib/tls/wscript	2014-01-14 13:09:16.887081559 -0600
+@@ -19,9 +19,9 @@
+         conf.SET_TARGET_TYPE('gpg-error', 'DISABLED')
+         return
+ 
+-    conf.check_cfg(package='gnutls',
+-                   args='"gnutls >= 1.4.0 gnutls != 2.2.4 gnutls != 2.8.0 gnutls != 2.8.1" --cflags --libs',
+-                   msg='Checking for gnutls >= 1.4.0 and broken versions', mandatory=False)
++    conf.check_cfg(package='gnutls3',
++                   args='"gnutls3 >= 1.4.0 gnutls3 != 2.2.4 gnutls3 != 2.8.0 gnutls3 != 2.8.1" --cflags --libs',
++                   msg='Checking for gnutls3 >= 1.4.0 and broken versions', mandatory=False)
+ 
+     if 'HAVE_GNUTLS' in conf.env:
+         conf.DEFINE('ENABLE_GNUTLS', 1)

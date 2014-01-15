@@ -6,7 +6,6 @@ archivers/unzip
 devel/git
 devel/llvm-mono
 security/sudo
-ports-mgmt/portaudit
 ports-mgmt/portmaster
 net/mpd5
 net/rsync
@@ -66,3 +65,4 @@ editors/libreoffice
 emulators/virtualbox-ose-additions
 www/nginx-devel
 databases/postgresql93-server
+net-p2p/transmission
