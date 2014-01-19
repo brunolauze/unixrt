@@ -16,5 +16,6 @@ cp -R pkgroot-options /usr/local/etc/poudriere.d/
 #Create Poudriere Jail
 poudriere jail -c -v 11.0-CURRENT -j pkgroot -a amd64
 chroot /usr/local/poudriere/jails/pkgroot ln -s /usr/local/bin/perl /usr/bin/perl
+chroot /usr/local/poudriere/jails/pkgroot ln -s /lib/libc.so.7 /lib/libc.so
 #Run Ports Building Job
 poudriere bulk -j pkgroot -p default -f ports.list -T -v

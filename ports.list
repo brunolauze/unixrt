@@ -7,7 +7,9 @@ devel/git
 devel/llvm-mono
 security/sudo
 ports-mgmt/portmaster
+ports-mgmt/pkg-plist
 net/mpd5
+security/ipsec-tools
 net/rsync
 net/nss_ldap
 www/links
@@ -66,3 +68,5 @@ emulators/virtualbox-ose-additions
 www/nginx-devel
 databases/postgresql93-server
 net-p2p/transmission
+mail/dovecot2
+mail/postfix

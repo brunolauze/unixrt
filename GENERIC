@@ -39,6 +39,7 @@ options         IPI_PREEMPTION
 options         LIBICONV
 options         LIBMCHAIN
 device          mptable
+options		DEVICE_POLLING
 
 device          pty
 
@@ -144,11 +145,10 @@ device          lagg
 device          ichwd
 device          amdsbwd
 device          viawd
-device          wbwd
+#device          wbwd
 
 options		RACCT
 options		RCTL
-
 
 #makeoptions	DEBUG=-g		# Build kernel with gdb(1) debug symbols
 #makeoptions	WITH_CTF=1		# Run ctfconvert(1) for DTrace support
