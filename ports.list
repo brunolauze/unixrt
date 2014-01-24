@@ -62,8 +62,9 @@ x11-toolkits/gtk-sharp30
 x11-toolkits/gnome-sharp20
 x11-toolkits/gtk-sharp-beans
 devel/monodevelop
+devel/bindinator
 net-im/skype4
-www/linux-c6-flashplugin
+www/linux-c6-flashplugin11
 www/nspluginwrapper
 emulators/virtualbox-ose-additions
 www/nginx-devel
@@ -73,3 +74,4 @@ www/chromium
 www/cef
 mail/dovecot2
 mail/postfix
+net/vnstat
