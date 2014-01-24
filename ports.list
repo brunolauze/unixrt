@@ -51,7 +51,6 @@ graphics/linux-c6-jpeg
 graphics/linux-c6-tiff
 x11-toolkits/linux-c6-qt47-x11
 x11-wm/mutter
-www/chromium
 www/webkit-gtk3
 x11/gnome-terminal
 x11-toolkits/libgdiplus
@@ -62,11 +61,15 @@ x11-toolkits/gtk-sharp20
 x11-toolkits/gtk-sharp30
 x11-toolkits/gnome-sharp20
 x11-toolkits/gtk-sharp-beans
+devel/monodevelop
 net-im/skype4
-editors/libreoffice
+www/linux-c6-flashplugin
+www/nspluginwrapper
 emulators/virtualbox-ose-additions
 www/nginx-devel
 databases/postgresql93-server
 net-p2p/transmission
+www/chromium
+www/cef
 mail/dovecot2
 mail/postfix
