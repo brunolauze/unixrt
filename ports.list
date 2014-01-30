@@ -12,6 +12,7 @@ net/mpd5
 security/ipsec-tools
 net/rsync
 net/nss_ldap
+net/openslp
 www/links
 graphics/png
 graphics/libjpeg-turbo
@@ -27,6 +28,7 @@ databases/postgresql93-client
 net/samba41
 sysutils/pcbsd-utils
 x11/xorg
+x11-fonts/webfonts
 multimedia/v4l_compat
 devel/glib20
 misc/shared-mime-info
@@ -51,6 +53,7 @@ graphics/linux-c6-jpeg
 graphics/linux-c6-tiff
 x11-toolkits/linux-c6-qt47-x11
 x11-wm/mutter
+www/webkit-gtk2
 www/webkit-gtk3
 x11/gnome-terminal
 x11-toolkits/libgdiplus
@@ -63,6 +66,7 @@ x11-toolkits/gnome-sharp20
 x11-toolkits/gtk-sharp-beans
 devel/monodevelop
 devel/bindinator
+java/eclipse-devel
 net-im/skype4
 www/linux-c6-flashplugin11
 www/nspluginwrapper
