@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Windows8
+Comment=The default desktop theme in Zorin OS
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Windows8
+MetacityTheme=Windows8
+IconTheme=Windows8
+CursorTheme=Windows8
+ButtonLayout=:minimize,maximize,close

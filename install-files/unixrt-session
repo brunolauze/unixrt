@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec /usr/local/bin/ck-launch-session /usr/local/sbin/unixrt-sessiond

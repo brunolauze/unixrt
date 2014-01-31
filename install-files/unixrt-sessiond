@@ -1,0 +1,40 @@
+#!/bin/sh
+
+__GL_ConformantBlitFramebufferScissor=1
+MM_CHARSET="UTF-8"
+BROWSER=chrome
+EDITOR=ee
+TERM=xterm
+XDG_CONFIG_HOME=~/.config
+XDG_DATA_HOME=/usr/local/share/
+XDG_DATA_DIRS=/usr/local/share/
+XDG_CACHE_HOME=~/.cache
+GTK2_RC_FILES=~/.gtkrc-2.0
+export __GL_ConformantBlitFramebufferScissor
+export MM_CHARSET
+export BROWSER
+export EDITOR
+export XDG_CONFIG_HOME
+export XDG_DATA_HOME
+export XDG_DATA_DIRS
+export XDG_CACHE_HOME
+export GTK2_RC_FILES
+/usr/local/libexec/at-spi-bus-launcher --launch-immediately &
+start-pulseaudio-x11 &
+gsettings set org.gnome.desktop.interface gtk-theme "Windows8" &
+gsettings set org.gnome.desktop.interface icon-theme "Windows8" &
+gsettings set org.gnome.desktop.interface cursor-theme "Windows8" &
+gconftool-2 --type=string --set /desktop/gnome/interface/gtk_theme "Windows8" &
+gconftool-2 --type=string --set /desktop/gnome/interface/icon_theme "Windows8" &
+gconftool-2 --type=string --set /desktop/gnome/peripherals/mouse/cursor_theme "Windows8" &
+gsettings set org.gnome.desktop.wm.preferences theme "Windows8" &
+xhost + &
+DISPLAY_LENGTH=${#DISPLAY}
+if [ "$DISPLAY_LENGTH" -gt "4" ]; then
+#Use metacity for X over Network Connection
+metacity --composite --sm-disable > /dev/null 2>&1 &
+else
+CLUTTER_PAINT=disable-clipped-redraws:disable-culling mutter > /dev/null 2>&1 &
+fi
+gnome-terminal > /dev/null 2>&1 &
+xclock
