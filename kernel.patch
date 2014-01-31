@@ -1,0 +1,76 @@
+--- sys/vm/uma_core.c.orig	2014-01-30 06:28:21.884847455 -0600
++++ sys/vm/uma_core.c	2014-01-30 06:29:30.754904460 -0600
+@@ -151,7 +151,7 @@
+ #define	UMA_STARTUP2	2
+ 
+ /* Maximum number of allowed items-per-slab if the slab header is OFFPAGE */
+-static const u_int uma_max_ipers = SLAB_SETSIZE;
++static const __unused u_int uma_max_ipers = SLAB_SETSIZE;
+ 
+ /*
+  * Only mbuf clusters use ref zones.  Just provide enough references
+--- sys/dev/sfxge/sfxge_tx.c.orig	2014-01-30 06:50:49.986293399 -0600
++++ sys/dev/sfxge/sfxge_tx.c	2014-01-30 06:52:13.256194036 -0600
+@@ -726,7 +726,7 @@
+ 		("tso_iph() in non-IPv4 state"));
+ 	return (const struct ip *)(tso->mbuf->m_data + tso->nh_off);
+ }
+-static inline const struct ip6_hdr *tso_ip6h(const struct sfxge_tso_state *tso)
++static inline const __unused struct ip6_hdr *tso_ip6h(const struct sfxge_tso_state *tso)
+ {
+ 	KASSERT(tso->protocol == htons(ETHERTYPE_IPV6),
+ 		("tso_ip6h() in non-IPv6 state"));
+--- sys/net80211/ieee80211_adhoc.c.orig	2014-01-30 07:16:36.127429016 -0600
++++ sys/net80211/ieee80211_adhoc.c	2014-01-30 07:17:39.956879863 -0600
+@@ -258,6 +258,7 @@
+ 	return 0;
+ }
+ 
++#ifdef IEEE80211_DEBUG
+ /*
+  * Decide if a received management frame should be
+  * printed when debugging is enabled.  This filters some
+@@ -275,6 +276,7 @@
+ 	}
+ 	return 1;
+ }
++#endif
+ 
+ /*
+  * Process a received frame.  The node associated with the sender
+--- sys/net80211/ieee80211_hostap.c.orig	2014-01-30 07:16:54.827522827 -0600
++++ sys/net80211/ieee80211_hostap.c	2014-01-30 07:18:12.406920656 -0600
+@@ -447,6 +447,7 @@
+ 	}
+ }
+ 
++#ifdef IEEE80211_DEBUG
+ /*
+  * Decide if a received management frame should be
+  * printed when debugging is enabled.  This filters some
+@@ -464,6 +465,7 @@
+ 	}
+ 	return 1;
+ }
++#endif
+ 
+ /*
+  * Process a received frame.  The node associated with the sender
+--- sys/net80211/ieee80211_sta.c.orig	2014-01-30 07:19:33.032585718 -0600
++++ sys/net80211/ieee80211_sta.c	2014-01-30 07:20:05.751755181 -0600
+@@ -486,6 +486,7 @@
+ 	return IEEE80211_ADDR_EQ(wh->i_addr3, vap->iv_myaddr);
+ }
+ 
++#ifdef IEEE80211_DEBUG
+ /*
+  * Decide if a received management frame should be
+  * printed when debugging is enabled.  This filters some
+@@ -503,6 +504,7 @@
+ 	}
+ 	return 1;
+ }
++#endif
+ 
+ /*
+  * Process a received frame.  The node associated with the sender
