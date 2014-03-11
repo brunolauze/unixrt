@@ -1,7 +1,7 @@
 #!/bin/sh
 
 portsnap fetch update
-./portmerge svn svn://creme-brulee.marcuscom.com/ports/trunk/
+./portmerge svn svn://creme-brulee.marcuscom.com/ports-experimental/trunk/
 ./portmerge svn https://trillian.chruetertee.ch/svn/ports/trunk/
 ./portmerge git https://github.com/cpu82/skype4-ports/
 ./portmerge git https://github.com/brunolauze/freebsd-ports/
