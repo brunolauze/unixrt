@@ -3,10 +3,9 @@
 portsnap fetch update
 ./portmerge svn svn://creme-brulee.marcuscom.com/ports-experimental/trunk/
 ./portmerge svn https://trillian.chruetertee.ch/svn/ports/trunk/
-./portmerge git https://github.com/cpu82/skype4-ports/
-./portmerge git https://github.com/brunolauze/freebsd-ports/
+./portmerge svn https://github.com/cpu82/skype4-ports/trunk/
+./portmerge svn https://github.com/brunolauze/freebsd-ports/trunk/
 cp patches/samba41/patch-source4_lib_tls_wscript /usr/ports/net/samba41/files/
-cp patches/samba41/Makefile /usr/ports/net/samba41/
 cp patches/ruby20/patch-ext__dl__extconf.rb /usr/ports/lang/ruby20/files/
 find /usr/ports -name "Makefile" -exec  sed -i '' -e 's|graphics/jpeg|graphics/libjpeg-turbo|g' {} +
 find /usr/ports -name "Makefile.common" -exec  sed -i '' -e 's|graphics/jpeg|graphics/libjpeg-turbo|g' {} +
