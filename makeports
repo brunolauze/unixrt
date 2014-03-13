@@ -5,6 +5,7 @@ portsnap fetch update
 ./portmerge svn https://trillian.chruetertee.ch/svn/ports/trunk/
 ./portmerge svn https://github.com/cpu82/skype4-ports/trunk/
 ./portmerge svn https://github.com/brunolauze/freebsd-ports/trunk/
+cp -R distfiles/* /usr/ports/distfiles/
 cp patches/samba41/patch-source4_lib_tls_wscript /usr/ports/net/samba41/files/
 cp patches/ruby20/patch-ext__dl__extconf.rb /usr/ports/lang/ruby20/files/
 find /usr/ports -name "Makefile" -exec  sed -i '' -e 's|graphics/jpeg|graphics/libjpeg-turbo|g' {} +

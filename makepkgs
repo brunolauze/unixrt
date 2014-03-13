@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #Creating ports set
-poudriere ports -c
+poudriere ports -c -F -f none -M /usr/ports -p default
 #Install make.conf
 cp pkgroot-make.conf /usr/local/etc/poudriere.d/
 #Delete any previous run
