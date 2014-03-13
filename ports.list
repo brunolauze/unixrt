@@ -55,7 +55,7 @@ x11-toolkits/linux-c6-qt47-x11
 x11-wm/mutter
 www/webkit-gtk2
 www/webkit-gtk3
-x11/gnome-terminal
+x11/sakura
 x11-toolkits/libgdiplus
 x11/nvidia-driver
 lang/mono
@@ -78,4 +78,3 @@ www/chromium
 www/cef
 mail/dovecot2
 mail/postfix
-net/vnstat
