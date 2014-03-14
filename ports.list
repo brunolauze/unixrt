@@ -77,4 +77,4 @@ net-p2p/transmission
 www/chromium
 www/cef
 mail/dovecot2
-mail/postfix
+mail/postfix-current
