@@ -2,7 +2,7 @@
 
 portsnap fetch update
 ./portmerge svn svn://creme-brulee.marcuscom.com/ports-experimental/trunk/
-./portmerge svn https://trillian.chruetertee.ch/svn/ports/trunk/
+./portmerge svn https://trillian.chruetertee.ch/svn/ports/branches/experimental/
 ./portmerge svn https://github.com/cpu82/skype4-ports/trunk/
 ./portmerge svn https://github.com/brunolauze/freebsd-ports/trunk/
 cp -R distfiles/* /usr/ports/distfiles/
