@@ -60,7 +60,11 @@ PKGVERSION_CMD="/usr/sbin/pkg_version"
 PKGVERSION_ARGS="-l \<"
 
 CVSUP_CMD="/usr/bin/csup"
+if [ -f /usr/bin/svnlite ]; then
+REPO_CMD="/usr/bin/svnlite co"
+else
 REPO_CMD="/usr/bin/svn co"
+fi
 
 if [ "git" == "$1" ]; then
 	REPO_CMD="/usr/local/bin/git clone"

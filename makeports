@@ -1,10 +1,14 @@
 #!/bin/sh
 
 portsnap fetch update
-./portmerge svn svn://creme-brulee.marcuscom.com/ports-experimental/trunk/
 ./portmerge svn https://trillian.chruetertee.ch/svn/ports/branches/experimental/
 ./portmerge svn https://github.com/cpu82/skype4-ports/trunk/
-./portmerge svn https://github.com/brunolauze/freebsd-ports/trunk/
+./portmerge https://github.com/vassilisl/freebsd-linux_base-f20/
+./portmerge svn https://svn.redports.org/brunolauze/
+rm -rf /usr/ports/Mk
+mkdir -p /usr/ports/distfiles
+mkdir -p /usr/ports/packages
+mkdir -p /usr/ports/packages/All
 cp -R distfiles/* /usr/ports/distfiles/
 cp patches/samba41/patch-source4_lib_tls_wscript /usr/ports/net/samba41/files/
 cp patches/ruby20/patch-ext__dl__extconf.rb /usr/ports/lang/ruby20/files/
@@ -13,3 +17,4 @@ find /usr/ports -name "Makefile.common" -exec  sed -i '' -e 's|graphics/jpeg|gra
 echo "Linux CentOS 6.2 Qt 4.7 X11 port" > /usr/ports/x11-toolkits/linux-c6-qt47-x11/pkg-descr
 echo "Linux CentOS 6.2 Qt 4.7 WebKit port" > /usr/ports/www/linux-c6-qt47-webkit/pkg-descr
 echo "Qt 4 Framework" > /usr/ports/x11-toolkits/qt4-gui/pkg-descr
+cd /usr/ports && svn co svn://svn.freebsd.org/ports/head/Mk
